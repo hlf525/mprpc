@@ -1,0 +1,31 @@
+syntax = "proto3";
+
+package fixbug;
+
+option cc_generic_services = true; 
+
+message ResultCode
+{
+    int32 errcode = 1;//错误码
+    bytes errmsg = 2;//错误消息
+}
+
+//定义查找好友列表请求消息类型
+message GetFriendListRequest
+{
+    uint32 userid = 1;
+}
+
+//定义查找好友列表响应消息类型
+message GetFriendListResponse
+{
+    ResultCode result = 1;
+    repeated bytes friends = 2;
+}
+
+//好友模块
+//在protobuf里面如何定义描述rpc方法的类型 - service
+service FriendServiceRpc
+{
+    rpc GetFriendList(GetFriendListRequest) returns (GetFriendListResponse);
+}

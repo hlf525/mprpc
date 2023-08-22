@@ -1,0 +1,6 @@
+
+17:41:26 => first log message!
+17:41:26 => /home/hlf/code/MPRPC/example/callee/friendservice.cc:main:54
+18:9:10 => [info] service_name:FriendServiceRpc
+18:9:10 => [info] method_name:GetFriendList
+18:9:10 => [info] RpcProvidr start service at ip:127.0.0.1 port:8000
